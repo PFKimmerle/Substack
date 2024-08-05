@@ -37,7 +37,7 @@ To use the scripts or run the projects:
 3. Follow the specific instructions in the README of that directory to run the scripts or projects.
 
 
-## Resources
+## Python Learning Resources
 - [Python Official Documentation](https://docs.python.org/3/)
 - [Real Python](https://realpython.com/)
 - [Learn Python Programming](https://www.learnpython.org/)
