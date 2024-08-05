@@ -17,7 +17,7 @@ If you encounter an error while using the weather service, please check the [wtt
 
 
 ## Installation
-1. Clone the repository: 'https://github.com/PFKimmerle/Python.git'
+1. Clone the repository: 'https://github.com/PFKimmerle/Substack.git'
 2. Install the required Python libraries: 'pip install requests beautifulsoup4'
 3. Install Dependencies: 'pip install requests beautifulsoup4'
 

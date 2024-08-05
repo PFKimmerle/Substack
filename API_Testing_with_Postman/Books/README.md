@@ -14,7 +14,7 @@ Check out my articles on my Substack website,[Pixels to Code](https://pfkimmerle
 To run on your local machine, follow these steps:
 
 1. **Clone the Repository**
-   - Clone this repository to your local machine: 'https://github.com/PFKimmerle/Python.git'
+   - Clone this repository to your local machine: 'https://github.com/PFKimmerle/Substack.git'
    - Navigate to the directory containing `Books`.
 
 2. **Set Up a Virtual Environment** (Optional but recommended)

@@ -20,7 +20,7 @@ For more insights, refer to my [Substack](https://pfkimmerle.substack.com/p/rest
 ## Getting Started
 
 To use, follow these steps:
-1. Clone the repository from GitHub to your local machine.
+1. Clone the repository to your local machine:'https://github.com/PFKimmerle/Substack.git'
 2. Navigate to the project directory.
 3. Create a virtual environment: `python -m venv venv`
 4. Activate the virtual environment: `venv\Scripts\activate` (Windows) or `source venv/bin/activate` (macOS/Linux)

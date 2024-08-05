@@ -25,7 +25,7 @@ The Web Scraper automates the process of navigating to the British Broadcasting 
 
 ## Installation
 Follow these steps to set up and run the Web Scraper:
-1. Clone the Repository: 'https://github.com/PFKimmerle/Python.git'
+1. Clone the Repository: 'https://github.com/PFKimmerle/Substack.git'
 2. Set up a Virtual Environment: 'python -m venv venv'
 3. Activate the Virtual Environment
 - On Windows: 'venv\Scripts\activate'
