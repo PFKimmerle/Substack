@@ -6,7 +6,7 @@ This folder contains individual Python projects demonstrating specific functiona
 
 ### Projects
 
-### 1. 5 Beginner Coding Projects (Folder: 5_Beginner_Coding_Projects)
+### 1. 5 Beginner Coding Projects
 This folder contains a collection of simple, beginner-friendly projects to help new programmers practice basic concepts in Python:
 
 - **Weather App**: Fetches weather information for specified cities or zip codes.
@@ -15,19 +15,19 @@ This folder contains a collection of simple, beginner-friendly projects to help 
 - **Number Guess**: A simple number guessing game.
 - **To-Do List**: Manages tasks with functionalities to add, remove, and view tasks.
 
-### 2. API Testing with Postman (Folder: API_Testing_with_Postman)
+### 2. API Testing with Postman
 This project demonstrates the use of Postman for API testing with practical examples:
 
 - **Books**: Tests API endpoints designed for handling book inventories with CRUD operations.
 - **Weather App**: Tests a weather-related API to validate responses based on different weather conditions and locations.
 
-### 3. Flask Book API (Folder: Flask_Book_Api)
+### 3. Flask Book API
 A RESTful API using Flask and SQLAlchemy for managing a books database with features to create, read, update, and delete records.
 
-### 4. Temperature Converter (Folder: Temperature_Converter)
+### 4. Temperature Converter
 A simple utility to convert temperatures between Celsius, Fahrenheit, and Kelvin.
 
-### 5. Python Study Guide (Folder: PythonStudyGuide)
+### 5. Python Study Guide
 Resources and guides for learning and mastering Python programming.
 
 ## Installation and Usage
