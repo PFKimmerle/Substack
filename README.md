@@ -1,39 +1,38 @@
 # Substack
 This repository contains a collection of Python projects featured in articles on my Substack website, [PFKimmerle Substack](https://pfkimmerle.substack.com/). 
 
-
 ## Repository Structure
 This folder contains individual Python projects demonstrating specific functionalities and applications.
 
 ### Projects
 
-1. **Weather App**
-   - Fetches weather information for a specified city or zip code. Displays the weather data in a simple text format and handles HTTP errors and other exceptions gracefully.
+### 1. 5 Beginner Coding Projects (Folder: 5_Beginner_Coding_Projects)
+This folder contains a collection of simple, beginner-friendly projects to help new programmers practice basic concepts in Python:
 
-2. **Web Scraper**
-   - Sets up a Selenium WebDriver for browsing and extracts data from the BBC News website using BeautifulSoup. Saves the extracted articles to a CSV file and handles errors effectively.
+- **Weather App**: Fetches weather information for specified cities or zip codes.
+- **Web Scraper**: Extracts data from the BBC News website and saves it to a CSV file.
+- **Calculator**: Performs basic arithmetic operations.
+- **Number Guess**: A simple number guessing game.
+- **To-Do List**: Manages tasks with functionalities to add, remove, and view tasks.
 
-3. **Calculator**
-   - Performs basic arithmetic operations: addition, subtraction, multiplication, and division. Continuously prompts the user for operations and handles invalid input gracefully.
+### 2. API Testing with Postman (Folder: API_Testing_with_Postman)
+This project demonstrates the use of Postman for API testing with practical examples:
 
-4. **Number Guess**
-   - Randomly selects a number between 1 and 100 for the user to guess. Provides feedback on guesses and tracks the number of attempts taken by the user.
+- **Books**: Tests API endpoints designed for handling book inventories with CRUD operations.
+- **Weather App**: Tests a weather-related API to validate responses based on different weather conditions and locations.
 
-5. **To-Do List**
-   - Allows users to add, remove, and view tasks in their to-do list. Ensures tasks are managed gracefully and handles invalid input.
+### 3. Flask Book API (Folder: Flask_Book_Api)
+A RESTful API using Flask and SQLAlchemy for managing a books database with features to create, read, update, and delete records.
 
-6. **Flask_Book_Api**
-   - A RESTful API built using Flask and SQLAlchemy for managing a database of specific entities. Includes functionalities for creating, reading, updating, and deleting records.
+### 4. Temperature Converter (Folder: Temperature_Converter)
+A simple utility to convert temperatures between Celsius, Fahrenheit, and Kelvin.
 
-7. **Temperature_Converter**
-   - Converts temperatures between Celsius, Fahrenheit, and Kelvin. Demonstrates basic input/output operations and error handling.
-
-8. **PythonStudyGuide**
-   - Contains resources to help recognize, write, and debug Python code. Referenced in the article "Recognizing Python: Writing and Debugging Code".
+### 5. Python Study Guide (Folder: PythonStudyGuide)
+Resources and guides for learning and mastering Python programming.
 
 ## Installation and Usage
 To use the scripts or run the projects: 
-1. Clone this repository to your local machine. 'https://github.com/PFKimmerle/Python.git'
+1. Clone this repository to your local machine. 'https://github.com/PFKimmerle/Substack.git'
 2. Navigate to the desired project directory.
 3. Follow the specific instructions in the README of that directory to run the scripts or projects.
 
@@ -50,6 +49,11 @@ To use the scripts or run the projects:
 - [Codecademy Learn Python](https://www.codecademy.com/learn/learn-python-3)
 - [The Python Guru](http://thepythonguru.com/)
 
+### Flask Learning Resources
+- [Flask Official Documentation](https://flask.palletsprojects.com/en/3.0.x/) - The official documentation for Flask, providing everything you need to start building applications with Flask.
+
+### Postman Learning Resources
+- [Learning Postman](https://learning.postman.com/) - This site offers a variety of tutorials and documentation to help you start testing APIs with Postman effectively.
 
 ## License
 This project is licensed under the MIT License. For more details, see the license file in the repository.
