@@ -1,0 +1,55 @@
+.counter-container {
+  padding: 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.counter-heading {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.counter-count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin: 20px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.increment-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.increment-button:hover {
+  background-color: #45a049;
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #da190b;
+}
