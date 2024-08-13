@@ -23,13 +23,23 @@ or
 
    - Navigate to the `client` directory and run `npm install` or `yarn install`for frontend dependencies.
 3. Set Up Environment Variables: Create a `.env` file in the root directory with the following:
-   ```
+
    MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
    PORT=5000
-   ```
-4. Start the Backend: In the root directory, run `npm start` or `yarn start` to start the Express server.
+
+4. Start the Backend: In the root directory, run `npm start` or `yarn start` to start the Express server.You should see messages similar to: 
+
+Server running on port 5000
+Connected to MongoDB
+
 5. Start the Frontend: In a new terminal, navigate to the `client` directory and run `npm start` or `yarn start`.
+You should see messages similar to:
+
+Compiled successfully!
+You can now view client in the browser.
+Local:            http://localhost:3000
+
 6. Access the Application: Open your browser and go to `http://localhost:3000`.
 
 ## Project Structure
@@ -58,7 +68,7 @@ This project is licensed under the MIT License. See the LICENSE file in the repo
 ## Note
 This is a demonstration project. In a production environment, ensure all sensitive information is properly secured and follow best practices for deployment and security.
 
-## For testing purposes, you can use the following credentials to log in:
+For testing purposes, you can use the following credentials to log in:
 
 - Email: test@email.com
 - Password: password123
