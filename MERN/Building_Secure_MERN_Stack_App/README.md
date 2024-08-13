@@ -63,6 +63,6 @@ This is a demonstration project. In a production environment, ensure all sensiti
 - Email: test@email.com
 - Password: password123
 
-## Please note that these credentials are for demonstration only and should not be used in a production environment.
+Please note that these credentials are for demonstration only and should not be used in a production environment.
 
-## Registration will not work with this email but can simulate account creation using with a different email (test3000@email.com or anything other than test@email.com ).
+Registration will not work with this email but can simulate account creation using with a different email (test3000@email.com or anything other than test@email.com ).
