@@ -30,6 +30,12 @@ A simple utility to convert temperatures between Celsius, Fahrenheit, and Kelvin
 ### 5. Python Study Guide
 Resources and guides for learning and mastering Python programming.
 
+### 6. MERN Projects
+This folder contains projects demonstrating the use of the MERN stack (MongoDB, Express, React, Node.js) in modern web development:
+
+- **Getting Familiar with MERN**: Demonstrates how the MERN stack works together to build a simple web application.
+- **Secure MERN Stack Applicatio**: A project showcasing a secure web application with user authentication and task management.
+
 ## Installation and Usage
 To use the scripts or run the projects: 
 1. Clone this repository to your local machine. 'https://github.com/PFKimmerle/Substack.git'
