@@ -35,6 +35,7 @@ This folder contains projects demonstrating the use of the MERN stack (MongoDB, 
 
 - **Getting Familiar with MERN**: Demonstrates how the MERN stack works together to build a simple web application.
 - **Secure MERN Stack Applicatio**: A project showcasing a secure web application with user authentication and task management.
+- **Real-Time Chat Application with MERN and Socket.io**: A project that demonstrates building a real-time chat application with user avatars and message persistence using the MERN stack and Socket.io.
 
 ## Installation and Usage
 To use the scripts or run the projects: 
