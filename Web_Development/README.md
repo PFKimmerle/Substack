@@ -5,15 +5,15 @@ Welcome to the MERN project repository! This folder contains three distinct proj
 
 ## Contents
 
-1. **[Building_Secure_MERN_Stack_App](./Building_Secure_MERN_Stack_App)**
+1. **Building_Secure_MERN_Stack_App**
    - Focus: Security practices in MERN stack applications.
    - Detailed instructions and information can be found in the subfolder.
 
-2. **[How_MERN_Works](./How_MERN_Works)**
+2. **How_MERN_Works**
    - Focus: Explanation and demonstration of how the MERN stack functions.
    - Detailed instructions and information can be found in the subfolder.
 
-3. **[Real_Time_Chat_App_MERN_Socket](./Real_Time_Chat_App_MERN_Socket)**
+3. **Real_Time_Chat_App_MERN_Socket**
    - Focus: Building a real-time chat application using the MERN stack and Socket.io.
    - Detailed instructions and information can be found in the subfolder.
 
