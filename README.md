@@ -4,38 +4,12 @@ This repository contains a collection of Python projects featured in articles on
 ## Repository Structure
 This folder contains individual Python projects demonstrating specific functionalities and applications.
 
-### Projects
-
-### 1. 5 Beginner Coding Projects
-This folder contains a collection of simple, beginner-friendly projects to help new programmers practice basic concepts in Python:
-
-- **Weather App**: Fetches weather information for specified cities or zip codes.
-- **Web Scraper**: Extracts data from the BBC News website and saves it to a CSV file.
-- **Calculator**: Performs basic arithmetic operations.
-- **Number Guess**: A simple number guessing game.
-- **To-Do List**: Manages tasks with functionalities to add, remove, and view tasks.
-
-### 2. API Testing with Postman
-This project demonstrates the use of Postman for API testing with practical examples:
-
-- **Books**: Tests API endpoints designed for handling book inventories with CRUD operations.
-- **Weather App**: Tests a weather-related API to validate responses based on different weather conditions and locations.
-
-### 3. Flask Book API
-A RESTful API using Flask and SQLAlchemy for managing a books database with features to create, read, update, and delete records.
-
-### 4. Temperature Converter
-A simple utility to convert temperatures between Celsius, Fahrenheit, and Kelvin.
-
-### 5. Python Study Guide
-Resources and guides for learning and mastering Python programming.
-
-### 6. MERN Projects
-This folder contains projects demonstrating the use of the MERN stack (MongoDB, Express, React, Node.js) in modern web development:
-
-- **Getting Familiar with MERN**: Demonstrates how the MERN stack works together to build a simple web application.
-- **Secure MERN Stack Applicatio**: A project showcasing a secure web application with user authentication and task management.
-- **Real-Time Chat Application with MERN and Socket.io**: A project that demonstrates building a real-time chat application with user avatars and message persistence using the MERN stack and Socket.io.
+## Folder Structure
+- Beginner_Projects: Simple projects for beginners to practice Python basics.
+- APIs_and_Backend_Development: Projects for building and testing APIs and backend services.
+- Web_Development: Projects related to web development using various technologies.
+- Utilities_and_Scripts: Useful scripts and utilities for everyday tasks.
+- Learning_Resources_and_Guides: Guides and resources for learning Python and web development.
 
 ## Installation and Usage
 To use the scripts or run the projects: 
