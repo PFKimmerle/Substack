@@ -7,9 +7,9 @@ This folder contains individual Python projects demonstrating specific functiona
 ## Folder Structure
 - **APIs_and_Backend_Development**: Projects for building and testing APIs and backend services.
 - **Beginner_Projects**: Simple projects for beginners to practice Python basics.
--**Learning_Resources_and_Guides**: Guides and resources for learning Python and web development.
--**Utilities_and_Scripts**: Useful scripts and utilities for everyday tasks.
--**Web_Development**: Projects related to web development using various technologies.
+- **Learning_Resources_and_Guides**: Guides and resources for learning Python and web development.
+- **Utilities_and_Scripts**: Useful scripts and utilities for everyday tasks.
+- **Web_Development**: Projects related to web development using various technologies.
 
 ## Installation and Usage
 To use the scripts or run the projects: 
