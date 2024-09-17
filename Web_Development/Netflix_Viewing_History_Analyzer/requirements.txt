@@ -1,2 +1,4 @@
 click==8.1.7
 pandas==2.2.2
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.25.1
