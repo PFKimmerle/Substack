@@ -21,9 +21,6 @@ To begin with any project:
 2. Navigate to the chosen project's directory.
 3. Follow the installation and setup instructions in the project-specific README.
 
-## Contributing
-
-Feel free to contribute by submitting pull requests or suggesting improvements. Please adhere to the contribution guidelines outlined in each project's README.
 
 ## License
 
