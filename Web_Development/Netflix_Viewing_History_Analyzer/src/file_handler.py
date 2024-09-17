@@ -6,6 +6,6 @@ def load_csv(filepath):
         df = pd.read_csv(filepath)
         return df
     except FileNotFoundError:
-        raise Exception(f"File {filepath} not found.")
+        raise FileNotFoundError(f"File '{filepath}' not found.")
     except Exception as e:
         raise Exception(f"An error occurred: {e}")
