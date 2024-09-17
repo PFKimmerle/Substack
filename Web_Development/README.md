@@ -24,9 +24,6 @@ To get started with any of the projects in this folder:
 2. Navigate to the project folder you are interested in.
 3. Refer to the specific README in the project directory for detailed setup instructions.
 
-## Contributions
-
-Contributions are welcome! If you have improvements or bug fixes, please open a pull request with your changes.
 
 ## License
 
