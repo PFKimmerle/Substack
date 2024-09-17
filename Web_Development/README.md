@@ -1,22 +1,33 @@
+# Web Development Projects
 
-# MERN Projects Overview
+This folder contains a series of web development projects showcased as part of the Substack repository. Each project directory comes with its own README detailing the specific setup, dependencies, and deployment instructions.
 
-Welcome to the MERN project repository! This folder contains three distinct projects, each focused on a different aspect of the MERN stack. For detailed information on each project, please navigate to the respective subfolder.
+## Projects Overview
 
-## Contents
+### MERN Stack Project
+A full-stack application using MongoDB, Express, React, and Node.js. This project demonstrates creating and deploying a MERN application.
 
-1. **Building_Secure_MERN_Stack_App**
-   - Focus: Security practices in MERN stack applications.
-   - Detailed instructions and information can be found in the subfolder.
+### Netflix Viewing History Analyzer
+An application to parse and analyze your Netflix viewing history. This project shows how to work with data extraction and visualization in Python.
 
-2. **How_MERN_Works**
-   - Focus: Explanation and demonstration of how the MERN stack functions.
-   - Detailed instructions and information can be found in the subfolder.
+### Real-Time Chat App
+This project is a real-time chat application using WebSocket technology. It demonstrates the implementation of real-time communication between users in a web application.
 
-3. **Real_Time_Chat_App_MERN_Socket**
-   - Focus: Building a real-time chat application using the MERN stack and Socket.io.
-   - Detailed instructions and information can be found in the subfolder.
+### Server Side Rendering with Next.js
+A Next.js project that covers the essentials of server-side rendering. This application improves SEO and optimizes load times.
 
 ## Getting Started
 
-To explore any of the projects, simply navigate to the relevant subfolder and follow the instructions provided in the README file located there.
+To get started with any of the projects in this folder:
+
+1. Clone the repository to your local machine.
+2. Navigate to the project folder you are interested in.
+3. Refer to the specific README in the project directory for detailed setup instructions.
+
+## Contributions
+
+Contributions are welcome! If you have improvements or bug fixes, please open a pull request with your changes.
+
+## License
+
+Each project is licensed under the MIT License unless specified otherwise in the project's directory.
