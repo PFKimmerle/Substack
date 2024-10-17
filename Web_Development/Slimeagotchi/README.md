@@ -1,44 +1,35 @@
 # Slimeogotchi
 
-Slimeogotchi is a virtual pet game built with Python's `tkinter` for the GUI and `pygame` for sound effects. In this game, you can interact with your pet by feeding, playing, cleaning, and showing love to keep it healthy and happy.
+Slimeogotchi is a virtual pet game built as a web-based project using HTML, CSS, and JavaScript. In this game, you can interact with your slime by feeding, playing, and letting it sleep to keep it healthy and happy. But watch out—if you neglect it, your slime might get mad or even die, turning into a ghost!
 
 ## Features
-- **Health, Happiness, and Hygiene**: Take care of your Slimeogotchi by keeping these stats up.
-- **Fun Interactions**: Feed, play, send love, clean, and give medicine to your pet.
-- **Animations**: The pet has idle, eating, sleeping, and ghost animations, providing a cute and lively experience.
+
+- **Health and Happiness**: Take care of your Slimeogotchi by keeping these stats up.
+- **Fun Interactions**: Feed, play, and put your pet to sleep to ensure it stays happy and healthy.
+- **Animations**: The slime has idle, eating, sleeping, mad, and ghost animations, providing a cute and engaging experience.
 - **Sounds**: Each action triggers a unique sound to make the game more immersive.
+- **Pop-up Death Modal**: If your slime dies, a pop-up with a ghost and a reset button appears, allowing you to restart the game.
 
 ## Getting Started
-
 ### Prerequisites
-- `tkinter` (should be included with Python by default)
-- `Pillow` for image handling (`pip install Pillow`)
-- `pygame` for sound effects (`pip install pygame`)
+- A web browser (no additional installations needed).
 
 ### Installation
-1. **Clone the repository**:    git clone https://github.com/PFKimmerle/Substack.git
+1. Clone the repository:
+   git clone https://github.com/your-username/slimeogotchi.git
+2. Navigate to the project directory:
+cd slimeogotchi
+3. Open the index.html file in your web browser:
+open index.html
 
-2. **Navigate to the project directory**: cd slimeogotchi
+No additional installations are required—everything runs directly in the browser.
 
-3. **Install the required Python packages**: pip install -r requirements.txt
-
-4. **Run the game**: python slimeogotchi.py
-
-### How to Play
-- **Feed** your pet to increase health
-- **Sleep** to restore health and happiness
-- **Play** to increase happiness but slightly reduce health
-- **Clean** your pet to boost hygiene
-- **Give Medicine** if your pet gets sick to restore health
-- **Send Love** to increase happiness
-
-Make sure to interact with your Slimeogotchi regularly to prevent it from getting sad or unhealthy. If you neglect it for too long, it will die and turn into a ghost. 😢 But don't worry, you can always reset the game and start again.
-
-## Project Structure
-- **`slimeogotchi.py`**: Main game logic, GUI, and pet interaction.
-- **`/images`**: Contains the pet animation frames 
-- **`/sounds`**: Contains the sound effects used in the game 
-
+## How to Play
+- Feed your slime to increase health.
+- Play to increase happiness, but be careful—it slightly reduces health.
+- Sleep restores health and happiness over time.
+- Make sure to interact with your Slimeogotchi regularly to prevent it from getting mad or unhealthy. If you neglect it for too long, it will die and turn into a ghost. 😢
+- You can always reset the game and start again by pressing the reset button in the death modal.
 
 ## License
-This project is licensed under the MIT License 
+This project is licensed under the MIT License.
