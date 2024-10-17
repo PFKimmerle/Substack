@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slimeagotchi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Modal for R.I.P. message -->
+<div id="deathModal" class="modal">
+    <div class="modal-content">
+        <h2>Oh no, R.I.P. Slime 😢</h2>
+        <img src="./images/slime/ghost1.png" alt="Ghost Image" style="width:100px; height:100px; margin-bottom: 20px;">
+        <p>Your slime has passed away. Please reset the game.</p>
+        <button id="resetButtonModal">Reset</button>
+    </div>
+</div>
+
+<!-- Modal styling -->
+<style>
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    }
+
+    .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    }
+
+    #resetButtonModal {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="stats">
+            <p>Happiness: <span id="happiness">50</span></p>
+            <p>Health: <span id="health">50</span></p>
+        </div>
+        <button class="change-bg-btn">Change Background</button>
+        <!-- Remove duplicate reset button -->
+        <!-- <button class="reset-btn" style="display: none;">Reset</button> -->
+        <canvas id="slimeCanvas" width="640" height="346" data-bg-index="0"></canvas>
+        <div class="controls">
+            <button>Feed</button>
+            <button>Music</button>
+            <button>Sleep</button>
+            <button>Bounce</button>
+            <button>Send Love</button>
+            <!-- Keep only one reset button with matching ID -->
+            <button id="resetButton" style="display:none;">Reset</button>
+        </div>
+    </div>
+    
+    <!-- Updated audio tags with correct file names -->
+    <audio id="bgMusic" src="sounds/8bit-music-for-game-68698.mp3" loop></audio>
+    <audio id="eatSound" src="sounds/eat-a-cracker-95783.mp3"></audio>
+    <audio id="levelUpSound" src="sounds/cute-level-up-2-189851.mp3"></audio>
+    <audio id="bonusSound" src="sounds/game-bonus-144751.mp3"></audio>
+    <audio id="clickSound" src="sounds/mouse-click-sound-233951.mp3"></audio>
+    <audio id="popSound" src="sounds/pop-sound-effect-197846.mp3"></audio>
+    <audio id="jumpSound" src="sounds/slimejump-6913.mp3"></audio>
+    <audio id="squishSound" src="sounds/slime-squish-2-218566.mp3"></audio>
+
+    <!-- Place script at the end of the body -->
+    <script type="module" src="scripts/main.js?v=1"></script>
+</body>
+</html>
