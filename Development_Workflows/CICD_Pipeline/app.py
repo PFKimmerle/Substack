@@ -1,6 +1,6 @@
-def greet(name):
-    return f"Hello, {name}!"
+def greet():
+    return "Hello!"
 
 
 if __name__ == "__main__":
-    print(greet("Intern"))
+    print(greet())
