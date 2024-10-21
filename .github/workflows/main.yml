@@ -37,4 +37,3 @@ jobs:
     - name: Test with pytest
       run: |
         PYTHONPATH=$PYTHONPATH:./Development_Workflows/CICD_Pipeline pytest Development_Workflows/CICD_Pipeline/tests
-
