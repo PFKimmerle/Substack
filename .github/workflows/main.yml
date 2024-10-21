@@ -14,11 +14,12 @@ jobs:
         python-version: [3.8, 3.9]
 
     steps:
-    - uses: actions/checkout@v2
-    
-    # Setup Python environment
+    # Update to the latest checkout action (v3)
+    - uses: actions/checkout@v3
+
+    # Setup Python environment with the latest action (v4)
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -39,7 +40,7 @@ jobs:
       run: |
         pytest Development_Workflows/CICD_Pipeline/tests --cov=Development_Workflows/CICD_Pipeline/ --cov-report=term --cov-report=xml
 
-    # Upload coverage to Codecov
+    # Upload coverage to Codecov (latest action v3)
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
 
