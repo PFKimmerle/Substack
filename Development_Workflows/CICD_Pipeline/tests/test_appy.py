@@ -1,5 +1,5 @@
 import pytest
-from app import greet
+from Development_Workflows.CICD_Pipeline.app import greet
 
 
 @pytest.mark.parametrize(
