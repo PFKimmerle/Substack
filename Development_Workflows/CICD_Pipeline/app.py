@@ -1,12 +1,9 @@
-import pytest
-from app import greet
+def greet(name):
+    """
+    Greet a person by name.
+    """
+    return f"Hello, {name}! Welcome to our CI/CD project!"
 
 
-@pytest.mark.parametrize(
-    "name, expected", [
-        ("Intern", "Hello, Intern!"),
-        ("Developer", "Hello, Developer!")
-    ]
-)
-def test_greet(name, expected):
-    assert greet(name) == expected
+if __name__ == "__main__":
+    print(greet("Intern"))
