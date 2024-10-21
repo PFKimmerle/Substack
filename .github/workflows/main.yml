@@ -14,24 +14,36 @@ jobs:
         python-version: [3.8, 3.9]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v2
+    
+    # Setup Python environment
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+
+    # Install flake8 and run linting
     - name: Run linting
       run: |
         pip install flake8
-        flake8 app.py tests
+        flake8 Development_Workflows/CICD_Pipeline/app.py Development_Workflows/CICD_Pipeline/tests
+
+    # Install dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r Development_Workflows/CICD_Pipeline/requirements.txt
+
+    # Run tests with pytest and measure coverage
     - name: Run tests with coverage
       run: |
-        pytest --cov=./ --cov-report=term --cov-report=xml
+        pytest Development_Workflows/CICD_Pipeline/tests --cov=Development_Workflows/CICD_Pipeline/ --cov-report=term --cov-report=xml
+
+    # Upload coverage to Codecov
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
+
+    # Run application
     - name: Run application
       run: |
-        python app.py
+        python Development_Workflows/CICD_Pipeline/app.py
