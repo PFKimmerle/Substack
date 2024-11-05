@@ -1,5 +1,5 @@
 # Substack
-This repository contains a collection of Python projects featured in articles on my Substack website, [PFKimmerle Substack](https://pfkimmerle.substack.com/). 
+This repository contains a collection of projects featured in articles on my Substack website, [PFKimmerle Substack](https://pfkimmerle.substack.com/). 
 
 ## Repository Structure
 This folder contains individual Python projects demonstrating specific functionalities and applications.
