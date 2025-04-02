@@ -1,0 +1,67 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.ai-suggestions {
+  margin: $spacing-lg 0;
+  
+  .suggest-button {
+    @include button($secondary);
+    margin-bottom: $spacing-md;
+    width: auto; // not full width
+    display: inline-block;
+  }
+  
+  .error {
+    color: $danger;
+    margin-bottom: $spacing-md;
+    padding: $spacing-sm;
+    background-color: lighten($danger, 40%);
+    border-radius: $border-radius;
+  }
+  
+  .suggestions-list {
+    @include card;
+    
+    h3 {
+      margin-top: 0;
+      color: $secondary;
+      border-bottom: 1px solid $gray-300;
+      padding-bottom: $spacing-sm;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .suggestion-item {
+      padding: $spacing-md;
+      border-bottom: 1px solid $gray-200;
+      background-color: $gray-100;
+      border-radius: 4px;
+      width: 100%;
+      
+      @media (min-width: 768px) {
+        width: calc(50% - 10px);
+      }
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      h4 {
+        margin: 0 0 $spacing-xs 0;
+        color: $dark;
+      }
+      
+      p {
+        margin: 0;
+        color: $gray-700;
+      }
+    }
+  }
+}

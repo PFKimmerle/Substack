@@ -1,0 +1,68 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.chore-item {
+  @include card;
+  @include flex; // manually written instead of mixin
+  margin-bottom: $spacing-md;
+  padding: $spacing-md;
+  @include transition;
+  position: relative;
+  
+  &.completed {
+    opacity: 0.7;
+    
+    .chore-details {
+      h3 {
+        text-decoration: line-through;
+        color: $gray-600;
+      }
+    }
+  }
+  
+  &.deleting {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: $spacing-md;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .chore-details {
+    flex: 1;
+    
+    h3 {
+      margin: 0 0 $spacing-xs 0;
+      font-size: $font-size-lg;
+    }
+    
+    p {
+      margin: $spacing-xs 0;
+      color: $gray-700;
+      font-size: $font-size-sm;
+    }
+    
+    .assigned-to {
+      font-style: italic;
+      color: $gray-600;
+    }
+  }
+  
+  .chore-actions {
+    @include flex(row, flex-end, center);
+    
+    .delete-btn {
+      @include button($danger);
+      font-size: $font-size-sm;
+      padding: $spacing-xs $spacing-sm;
+    }
+  }
+  
+  @include responsive(md) {
+    padding: $spacing-md $spacing-lg;
+  }
+}

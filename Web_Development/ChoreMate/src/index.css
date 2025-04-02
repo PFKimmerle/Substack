@@ -1,0 +1,472 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* full width container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* was centered - looked bad */
+  text-align: left;
+}
+
+/* Fix app container padding */
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Make suggestions display in a row */
+.ai-suggestions .suggestions-list ul,
+.suggested-chores-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+/* hide extra suggestions */
+.ai-suggestions .suggestions-list ul li:nth-child(n+4),
+.suggested-chores-container > div:nth-child(n+4) {
+  display: none;
+}
+
+/* 3-column layout on desktop */
+@media (min-width: 768px) {
+  .ai-suggestions .suggestions-list ul,
+  .suggested-chores-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Style for suggestion items */
+.suggestion-item {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 90px;
+  justify-content: space-between;
+}
+
+.suggestion-item:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+  border-color: #646cff;
+}
+
+/* Add spacing for header */
+.app-header {
+  margin-bottom: 30px;
+}
+
+/* Add visual indication that suggestions are clickable */
+.suggestion-item h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+/* Better spacing for suggested chores section */
+.suggested-chores {
+  margin-bottom: 40px;
+}
+
+.suggested-chores h2 {
+  margin-bottom: 20px;
+}
+
+/* Modal Styles - With more spacing */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* darker overlay */
+  z-index: 1001;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #242424;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 1002;
+  margin: 0 auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Improved form styling */
+.modal-content .form-group {
+  margin-bottom: 24px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.modal-content input, 
+.modal-content textarea {
+  width: 94%; /* TODO: fix this hack later */
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modal-content input:focus, 
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+.modal-content .form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.modal-content .cancel-button {
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #e0e0e0;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.modal-content .cancel-button:hover {
+  background-color: #333;
+}
+
+.modal-content .submit-button {
+  background-color: #646cff;
+  border: 1px solid transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.modal-content .submit-button:hover {
+  background-color: #535bf2;
+}
+
+.modal-content .submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Main page spacing fixes */
+.app-header .tagline {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+/* buttons side by side */
+.app-actions {
+  display: flex;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.suggest-chores-button,
+.add-chore-button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.add-chore-button {
+  background-color: #646cff;
+  color: white;
+}
+
+.add-chore-button:hover {
+  background-color: #535bf2;
+}
+
+.suggest-chores-button {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+.suggest-chores-button:hover {
+  background-color: #333;
+  border-color: #646cff;
+}
+
+/* Add space between header and buttons */
+.logo h1 {
+  margin-bottom: 15px;
+}
+
+/* Improved source indicator badge for AI suggestions */
+.source-badge {
+  margin-top: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+}
+
+.api-badge {
+  background-color: #4ade80;
+}
+
+.fallback-badge {
+  background-color: #f87171;
+}
+
+/* List-style chore layout */
+.chore-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px !important;
+  margin-bottom: 30px;
+}
+
+.chore-item-row {
+  padding: 12px 16px;
+  background-color: #333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s, opacity 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.chore-item-row:hover {
+  background-color: #3a3a3a;
+}
+
+.chore-item-row.completed {
+  opacity: 0.7;
+  border-left-color: #4ade80;
+}
+
+.chore-item-row.deleting {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.chore-checkbox {
+  margin-right: 12px;
+}
+
+.chore-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.chore-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.chore-title {
+  font-weight: 500;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chore-item-row.completed .chore-title {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.chore-assigned, .chore-date {
+  font-size: 0.8rem;
+  color: #999;
+  margin-right: 10px;
+}
+
+.chore-actions {
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn {
+  padding: 4px 10px;
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #f87171;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: rgba(248, 113, 113, 0.1);
+  border-color: #f87171;
+}
+
+/* Pending and Completed section styles */
+.pending-chores, .completed-chores {
+  margin-bottom: 30px;
+}
+
+.pending-chores h2, .completed-chores h2 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #fff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.completed-heading {
+  color: #999 !important;
+}
+
+/* Empty list message */
+.empty-list {
+  padding: 15px;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  background-color: #333;
+  border-radius: 6px;
+}
+
+/* Loading and error states */
+.loading, .error {
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #333;
+}
+
+.error {
+  color: #f87171;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,157 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Base form styling
+.form-group {
+  margin-bottom: $spacing-md;
+  
+  label {
+    display: block;
+    margin-bottom: $spacing-xs;
+    font-weight: $font-weight-bold;
+    color: $gray-200;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid $gray-700;
+    border-radius: $border-radius;
+    font-family: inherit;
+    font-size: $font-size-base;
+    background-color: $gray-800;
+    color: $white;
+    
+    &:focus {
+      outline: none;
+      border-color: #646cff;
+      box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+    }
+  }
+}
+
+// Add chore button
+.add-chore-button {
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  
+  &:hover {
+    border-color: #646cff;
+  }
+  
+  &:focus, &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+// Modal Styles - Fixed for proper overlay
+.chore-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.chore-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75); // darker overlay
+  animation: fadeIn 0.2s ease-out;
+}
+
+.chore-modal-content {
+  position: relative;
+  background-color: #242424;
+  width: 90%;
+  max-width: 500px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    
+    .cancel-button, .submit-button {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    
+    .cancel-button {
+      background-color: transparent;
+      border: 1px solid #555;
+      color: #e0e0e0;
+      
+      &:hover {
+        background-color: #333;
+      }
+    }
+    
+    .submit-button {
+      background-color: #646cff;
+      border: 1px solid transparent;
+      color: white;
+      
+      &:hover {
+        background-color: #535bf2;
+      }
+      
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

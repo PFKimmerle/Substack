@@ -1,0 +1,58 @@
+@use './_variables' as *;
+@use './_mixins' as *;
+
+@use './components/_chore-item';
+@use './components/_chore-list';
+@use './components/_header';
+@use './components/_form';
+@use './components/_api-suggestions';
+
+// Base styles
+body {
+  font-family: $font-family;
+  background-color: $light;
+  color: $dark;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // Add padding to fix left/right spacing
+  padding: 0 20px;
+}
+
+main {
+  flex: 1;
+  padding: $spacing-md 0;
+}
+
+footer {
+  text-align: center;
+  padding: $spacing-md;
+  background-color: $gray-100;
+  color: $gray-600;
+  font-size: $font-size-sm;
+  margin-top: 30px;
+}
+
+// Button and form styles
+.add-chore-container {
+  margin-top: $spacing-md;
+}
+
+.add-chore-button {
+  @include button($primary);
+  width: 100%;
+  padding: $spacing-md;
+  font-size: $font-size-lg;
+}
+
+.add-chore-form {
+  @include card;
+  margin-top: $spacing-md;
+}

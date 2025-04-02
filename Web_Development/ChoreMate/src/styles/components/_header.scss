@@ -1,0 +1,23 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.app-header {
+  background-color: $primary;
+  color: $white;
+  padding: $spacing-md $spacing-lg;
+  @include flex(row, space-between, center);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  .logo {
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    
+    .tagline {
+      margin: $spacing-xs 0 0;
+      font-size: $font-size-sm;
+      opacity: 0.8;
+    }
+  }
+}
