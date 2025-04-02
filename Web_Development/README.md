@@ -4,6 +4,9 @@ This folder contains a series of web development projects showcased as part of t
 
 ## Projects Overview
 
+### ChoreMate
+A household chore manager that uses free APIs to generate chore suggestions. 
+
 ### MERN Stack Project
 A full-stack application using MongoDB, Express, React, and Node.js. This project demonstrates creating and deploying a MERN application.
 
