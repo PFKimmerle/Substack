@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="title"></h1>
+    <img id="img" style="max-width:100%">
+    <p id="desc"></p>
+
+    <script>
+      fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY') // Replace 'DEMO_KEY' with your actual API key
+        .then(res => res.json())
+        .then(d => {
+          title.textContent = d.title;
+          img.src = d.url;
+          desc.textContent = d.explanation;
+        });
+    </script>
+  </body>
+</html>
