@@ -1,4 +1,4 @@
-# How Agent-to-Agent (A2A) Collaborates to Write a Story
+# How AI Agents Collaborate to Write a Story
 
 This repository contains a short story titled **_The Fall of the Guild_**, created using a multi-agent AI workflow known as Agent-to-Agent (A2A). The project explores how AI agents can support and enhance the fiction writing process through structured collaboration.
 
@@ -14,7 +14,7 @@ This project demonstrates how multiple AI agents can assist in co-authoring narr
 
 Each file is written in Markdown for easy readability and formatting on GitHub.
 
-## A2A Agent Roles
+## Agent Roles
 
 - **Narrative Agent**: Responsible for generating prose, descriptions, and dialogue.
 - **Editor Agent**: Focused on grammar, pacing, and clarity.  
