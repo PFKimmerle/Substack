@@ -4,8 +4,8 @@ This directory within the Substack repository is dedicated to providing educatio
 
 ## Available Resources
 
-### A2A Story Collaboration
-An experimental short story co-written with AI agents using a multi-agent (A2A) workflow. Demonstrates collaborative fiction writing with defined agent roles for drafting, editing, and consistency.
+### How AI Agents Collaborate to Write a Story
+An experimental short story co-written with AI agents using a multi-agent workflow. Demonstrates collaborative fiction writing with defined agent roles for drafting, editing, and consistency.
 
 
 ### Python Study Guide
