@@ -7,6 +7,9 @@ This directory is part of the Substack repository and hosts a variety of utility
 ### Temperature Converter
 A utility script that converts temperatures between Fahrenheit, Celsius, and Kelvin. This script demonstrates basic programming concepts and is useful for educational purposes or everyday use.
 
+### Ask Phi3:Mini  
+Chat with the `phi3:mini` language model locally using Python and Ollama. 
+
 ## Getting Started
 
 To use any of the scripts in this folder:
