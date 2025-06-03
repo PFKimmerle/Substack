@@ -45,7 +45,6 @@ def test_api(name, url, params=None, headers=None, method="GET", is_json=True):
 
 # List of APIs to test
 apis = [
-    # Utility APIs
     {
         "name": "GitHub API - Zen",
         "url": "https://api.github.com/zen",
@@ -227,40 +226,8 @@ apis = [
         "is_json": True,
         "category": "Utility"
     },
-
     
-    # AI APIs
-    {
-        "name": "Hugging Face - Public Model",
-        "url": "https://huggingface.co/api/models/gpt2",
-        "method": "GET",
-        "is_json": True,
-        "category": "AI"
-    },
-    {
-        "name": "TextGears Grammar Check",
-        "url": "https://api.textgears.com/check.php",
-        "params": {"text": "I is programmer", "key": "demo_key"},
-        "method": "GET",
-        "is_json": True,
-        "category": "AI"
-    },
-    {
-        "name": "Stanford NLP API",
-        "url": "http://corenlp.run/",
-        "params": {"properties": json.dumps({"annotators": "tokenize,ssplit,pos", "outputFormat": "json"}), "pipelineLanguage": "en"},
-        "headers": {"Content-Type": "application/x-www-form-urlencoded"},
-        "method": "POST",
-        "is_json": False,
-        "category": "AI"
-    },
-    {
-        "name": "Algorithmia NLP",
-        "url": "https://algorithmia.com/algorithms/nlp/LDA/info",
-        "method": "GET",
-        "is_json": True,
-        "category": "AI"
-    }
+    
 ]
 
 if __name__ == "__main__":

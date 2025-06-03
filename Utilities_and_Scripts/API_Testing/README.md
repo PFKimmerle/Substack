@@ -4,7 +4,7 @@ A collection of lightweight tools and scripts to test and demo free public APIs.
 
 # Files Included
 
-- `apiTester.py` – Python script to test a wide variety of free public APIs (utility & AI).
+- `apiTester.py` – Python script to test a wide variety of free public APIs.
 - `test-weather-api.js` – Node.js script to fetch current weather using Open Meteo API.
 - `nasa.html` – HTML demo fetching NASA's Astronomy Picture of the Day (APOD) API.
 
