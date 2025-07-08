@@ -1,14 +1,20 @@
 # Beginner Projects
 
-This directory within the Substack repository is dedicated to projects suitable for individuals beginning their journey in programming. Each project is designed to provide hands-on experience with fundamental programming concepts.
+This directory within the Substack repository is dedicated beginner-friendly coding projects.
 
 ## Projects Overview
 
 ### 5 Beginner Coding Projects
-A collection of simple coding projects aimed at helping new programmers practice and understand basic coding principles. These projects cover a variety of topics from simple algorithms to basic data handling.
+A bundle of small Python projects covering topics like randomization, input handling, and simple logic.
 
 ### Class Scheduling Script
-A Python script designed to help manage class schedules. This project serves as an introduction to Python programming, focusing on data structures and file handling.
+A tool to manage and display class schedules.
+
+### Movie Mood Analyzer
+A Flask app that analyzes movie reviews using VADER sentiment analysis.
+
+### Word Scramble Game
+A terminal-based Python game that lets users guess scrambled words by category.
 
 ## Getting Started
 

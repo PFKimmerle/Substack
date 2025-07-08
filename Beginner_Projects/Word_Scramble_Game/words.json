@@ -1,0 +1,10 @@
+{
+  "flowers": ["rose", "daisy", "tulip", "sunflower", "orchid",
+              "lily", "daffodil", "violet", "poppy", "peony"],
+
+  "food": ["pizza", "chicken", "sushi", "popcorn", "pasta",
+           "taco", "salad", "ramen", "pistachio", "curry"],
+
+  "planets": ["mercury", "venus", "earth", "mars", "jupiter",
+              "saturn", "uranus", "neptune"]
+}
