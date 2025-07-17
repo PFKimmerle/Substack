@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+
+.app {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  color: #1e293b;
+}
+
+.header__subtext {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+
+.filters {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filters__input,
+.filters__select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  margin: 0.25rem 0.5rem;
+  height: 42px;
+  box-sizing: border-box;
+}
+
+
+.filters__input:focus,
+.filters__select:focus,
+.filters__select:hover,
+#toggleOrder:hover,
+#toggleOrder:focus {
+  outline: none;
+  border: 1px solid #64748b;
+  box-shadow: 0 0 0 2px rgba(100, 116, 139, 0.3);
+  background-color: #f1f5f9;
+  cursor: pointer;
+}
+
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.country {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.country p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #475569;
+  margin-top: 0.25rem;
+}
+
+
+.country:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+body.dark .country:hover {
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.274);
+}
+
+
+.country__flag {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;;
+  margin-bottom: 1rem;
+}
+
+body.dark {
+  background: #121212;
+  color: #f9fafb;
+}
+
+body.dark .country {
+  background: #1c1b1b;
+  color: #f1f5f9;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top-color: #1e293b;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.dark-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.toggle-track {
+  width: 50px;
+  height: 28px;
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-thumb {
+  background-color: #ffffff;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon {
+  font-size: 14px;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+body.dark .toggle-track {
+  background-color: #1c1b1b;
+}
+
+body.dark .toggle-thumb {
+  transform: translateX(22px);
+}
+
+body.dark .toggle-icon {
+  color: #121212;
+}
+
+.stats {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+body.dark .stats {
+  color: #f9fafb;
+}
+
+.controls-card {
+  background: white;
+  border-radius: 4px;
+  box-sizing: border-box; 
+  padding: 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body.dark .controls-card {
+  background: #1c1b1b;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+body.dark .stat-card {
+  background: #1c1b1b;
+  color: #f1f5f9;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+}
+
+.modal-flag {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+body.dark .modal {
+  background: #1c1b1b;
+  color: #f1f5f9;
+}
+body.dark .modal-close {
+  color: white;
+}
+

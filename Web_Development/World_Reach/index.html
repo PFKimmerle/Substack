@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Reach Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="dark-toggle" id="darkModeToggle">
+  <div class="toggle-track">
+    <div class="toggle-thumb">
+      <span class="toggle-icon">❂</span>
+    </div>
+  </div>
+</div>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <h1 class="header-title">World Reach</h1>
+            <p class="header__subtext">Explore countries by region, population, and language.</p>
+        </header>
+
+    <div class="controls-card">
+        <div class="filters">
+            <!-- filter UI goes here -->
+            <input type="text" id="search" class="filters__input" placeholder=" Search country...">
+            <select id="region" class="filters__select">
+                <option value="">All Regions</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select> 
+
+            <select id="sort" class="filters__select">
+                <option value="name">Sort by Name</option>
+                <option value="population">Sort by Population</option>
+                <option value="area">Sort by Area</option>
+            </select>
+
+            <button id="toggleOrder" class="filters__select">▼ Descending</button>
+    </div>
+</div>
+
+    <div class="stats-row">
+        <div class="stat-card"><strong>Countries:</strong> <span id="total">0</span></div>
+        <div class="stat-card"><strong>Population:</strong> <span id="population">0</span></div>
+        <div class="stat-card"><strong>Languages:</strong> <span id="languages">0</span></div>
+    </div>
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="countries" class="countries">
+        <!-- country cards  -->
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
