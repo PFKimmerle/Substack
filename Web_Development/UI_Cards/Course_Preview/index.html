@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Preview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Preview</h1>
+        <div id="courses" class="course-grid">
+            <div class="loading">Loading courses...</div>
+        </div>
+    </div>
+
+    <script>
+        const courses = [
+            {
+                title: "Precalculus",
+                subtitle: "10 Units • 131 Skills",
+                units: [
+                    "Unit 1: Composite and inverse functions",
+                    "Unit 2: Trigonometry", 
+                    "Unit 3: Complex numbers",
+                    "Unit 4: Rational functions",
+                    "Unit 5: Conic sections",
+                    "Unit 6: Vectors",
+                    "Unit 7: Matrices",
+                    "Unit 8: Probability and combinatorics",
+                    "Unit 9: Series",
+                    "Unit 10: Limits and continuity"
+                ]
+            },
+            {
+                title: "Calculus I",
+                subtitle: "8 Units • 98 Skills",
+                units: [
+                    "Unit 1: Limits and continuity",
+                    "Unit 2: Derivatives basics",
+                    "Unit 3: Derivative rules",
+                    "Unit 4: Applications of derivatives",
+                    "Unit 5: Integration basics",
+                    "Unit 6: Integration techniques",
+                    "Unit 7: Applications of integrals",
+                    "Unit 8: Differential equations"
+                ]
+            },
+            {
+                title: "Statistics",
+                subtitle: "12 Units • 156 Skills", 
+                units: [
+                    "Unit 1: Data collection",
+                    "Unit 2: Descriptive statistics",
+                    "Unit 3: Probability",
+                    "Unit 4: Random variables",
+                    "Unit 5: Sampling distributions",
+                    "Unit 6: Confidence intervals",
+                    "Unit 7: Hypothesis testing",
+                    "Unit 8: Regression analysis"
+                ]
+            },
+            {
+                title: "Linear Algebra",
+                subtitle: "9 Units • 112 Skills",
+                units: [
+                    "Unit 1: Vector spaces",
+                    "Unit 2: Linear transformations",
+                    "Unit 3: Matrix operations",
+                    "Unit 4: Determinants",
+                    "Unit 5: Eigenvalues and eigenvectors",
+                    "Unit 6: Orthogonality",
+                    "Unit 7: Diagonalization",
+                    "Unit 8: Applications",
+                    "Unit 9: Advanced topics"
+                ]
+            }
+        ];
+
+        const container = document.getElementById('courses');
+        
+        const courseHTML = courses.map(course => {
+            const unitsList = course.units.slice(0, 4).map(unit => 
+                `<li>${unit}</li>`
+            ).join('');
+            
+            const remainingCount = course.units.length - 4;
+            const moreUnits = remainingCount > 0 ? `<li class="more-units">+${remainingCount} more units</li>` : '';
+            
+            return `
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">${course.title}</h3>
+                        <p class="course-subtitle">${course.subtitle}</p>
+                    </div>
+                    <div class="course-content">
+                        <ul class="units-list">
+                            ${unitsList}
+                            ${moreUnits}
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="start-btn" onclick="openCourse('${course.title}')">Start Course</button>
+                    </div>
+                </div>
+            `;
+        }).join('');
+        
+        container.innerHTML = courseHTML;
+
+        function openCourse(courseTitle) {
+            alert(`Opening ${courseTitle} course...`);
+        }
+    </script>
+</body>
+</html>
