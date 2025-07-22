@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Profiles</h1>
+        <div id="profiles" class="profiles-grid">
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        fetch('https://randomuser.me/api/?results=8')
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('profiles');
+                
+                container.innerHTML = data.results.map(user => `
+                    <div class="profile-card">
+                        <img src="${user.picture.large}" alt="${user.name.first}">
+                        <div class="profile-info">
+                            <h3>${user.name.first} ${user.name.last}</h3>
+                            <p>${user.location.city}, ${user.location.country}</p>
+                        </div>
+                    </div>
+                `).join('');
+            })
+            .catch(() => {
+                document.getElementById('profiles').innerHTML = '<div class="error">Failed to load</div>';
+            });
+    </script>
+</body>
+</html>
