@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blog Posts</h1>
+        <div id="posts" class="posts-list">
+            <div class="loading">Loading posts...</div>
+        </div>
+    </div>
+
+    <script>
+        const posts = [
+            {
+                title: "Setting up a summer garden",
+                excerpt: "Planted tomatoes, peppers, and herbs this weekend. The soil prep took forever but worth it.",
+                author: "Amerie M",
+                date: "Jul 15",
+                readTime: "3 min read"
+            },
+            {
+                title: "My tomatoes are actually growing",
+                excerpt: "Update from last month - they're huge now. Also learned about companion planting the hard way.",
+                author: "Monty B",
+                date: "Jul 8",
+                readTime: "2 min read"
+            },
+            {
+                title: "Beating the heat with shade plants",
+                excerpt: "Tried planting basil and mint under a trellis this year. Less sun stress and way more fragrant.",
+                author: "Vivian L",
+                date: "Jul 18",
+                readTime: "3 min read"
+            },
+            {
+                title: "Watering schedule that works",
+                excerpt: "Finally figured out morning vs evening watering.",
+                author: "Carlos R",
+                date: "Jul 20",
+                readTime: "4 min read"
+            },
+        ];
+
+        const container = document.getElementById('posts');
+        
+        container.innerHTML = posts.map(post => `
+            <div class="post-card">
+                <div class="post-meta">
+                    <span class="author">${post.author}</span>
+                    <span class="date">${post.date}</span>
+                </div>
+                <h2 class="post-title">${post.title}</h2>
+                <p class="post-excerpt">${post.excerpt}</p>
+                <div class="post-footer">
+                    <span class="read-time">${post.readTime}</span>
+                </div>
+            </div>
+        `).join('');
+    </script>
+</body>
+</html>
