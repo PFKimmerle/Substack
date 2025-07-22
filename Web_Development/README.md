@@ -22,7 +22,10 @@ A Next.js project that covers the essentials of server-side rendering. This appl
 ### Slimeogotchi
 A virtual pet simulator built with Python and tkinter, allowing players to care for and interact with their own digital pet through various activities like feeding, cleaning, and playing.
 
-### World Reach  
+### UI_Cards
+A collection of UI card layouts using HTML, CSS, JavaScript, and public APIs. Each folder has its own demo.
+
+### World Reach
 An interactive dashboard that lets users browse countries by region, population, and language. Built using JavaScript and the REST Countries API.
 
 ## Getting Started
