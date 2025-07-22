@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Art Gallery</h1>
+        <div id="gallery" class="gallery-grid">
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        fetch('https://api.artic.edu/api/v1/artworks?limit=4&fields=id,title,artist_title,image_id')
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('gallery');
+                
+                container.innerHTML = data.data.map(art => {
+                    if (!art.image_id) return '';
+                    const img = `https://www.artic.edu/iiif/2/${art.image_id}/full/400,400/0/default.jpg`;
+                    
+                    return `
+                        <div class="art-card">
+                            <img src="${img}" alt="${art.title}">
+                            <h3>${art.title}</h3>
+                            <p>${art.artist_title || 'Unknown'}</p>
+                        </div>
+                    `;
+                }).join('');
+            })
+            .catch(() => {
+                document.getElementById('gallery').innerHTML = '<div class="error">Failed to load</div>';
+            });
+    </script>
+</body>
+</html>
