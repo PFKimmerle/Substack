@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>World Bank</h1>
+        <div id="stats" class="stats-grid">
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+
+    <script>
+        fetch('https://api.worldbank.org/v2/country/US/indicator/SP.POP.TOTL?format=json&date=2022')
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('stats');
+                const entry = data[1] ? data[1][0] : null;
+                const population = entry ? entry.value : null;
+            
+                const stats = [
+                    { title: 'Country', value: 'USA' },
+                    { title: 'Year', value: '2022' },
+                    { title: 'Population', value: population ? Math.round(population / 1_000_000) + 'M' : 'N/A' },
+                ];
+            
+                container.innerHTML = stats.map(stat => `
+                    <div class="stat-card">
+                        <div class="stat-number">${stat.value}</div>
+                        <div class="stat-title">${stat.title}</div>
+                    </div>
+                `).join('');
+            })
+            .catch(() => {
+                document.getElementById('stats').innerHTML = '<div class="error">Failed to load</div>';
+            });
+    </script>
+
+</body>
+</html>
