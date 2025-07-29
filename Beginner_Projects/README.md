@@ -10,6 +10,9 @@ A bundle of small Python projects covering topics like randomization, input hand
 ### Class Scheduling Script
 A tool to manage and display class schedules.
 
+### Flip and Match
+A terminal-based emoji memory game where players flip cards and try to match pairs.
+
 ### Movie Mood Analyzer
 A Flask app that analyzes movie reviews using VADER sentiment analysis.
 
