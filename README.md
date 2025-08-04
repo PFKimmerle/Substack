@@ -5,6 +5,7 @@ This repository contains a collection of projects featured in articles on my Sub
 This folder contains individual Python projects demonstrating specific functionalities and applications.
 
 ## Folder Structure
+- **AI_Projects**: Projects involving artificial intelligence tools and technologies.
 - **APIs_and_Backend_Development**: Projects for building and testing APIs and backend services.
 - **Beginner_Projects**: Simple projects for beginners to practice Python basics.
 - **Development_Workflows**: Simple projects focused on automating, optimizing, and managing development processes across various stages.
