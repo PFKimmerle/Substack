@@ -4,6 +4,9 @@ This folder contains various projects focused on artificial intelligence tools a
 
 # Projects Overview
 
+### Memory Bot
+A chatbot with conversation history that remembers earlier exchanges. Python backend with vanilla JavaScript frontend.
+
 ### Word Scramble (Claude Code)
 A Python terminal game that lets you guess scrambled words by category, built with Claude Code assistance.
 
