@@ -3,9 +3,12 @@
 A collection of chatbot projects. Each bot lives in its own folder and has its own README.
 
 ## Current bots
-- **Memory Bot**
-- **SkyPanel Bot**
-- **TARS Role Bot**
+- **ApexVora Bot** - carnivorous plant care
+- **ScarletSous Bot** - recipe suggestions from ingredients
+- **SkyPanel Bot** - live weather lookup
+- **TARS Role Bot** - Interstellar-themed chatbot
+- **Memory Bot** - chatbot with conversation history
+
 
 ## How to use
 1. Open a bot’s folder.
