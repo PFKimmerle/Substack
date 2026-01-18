@@ -1,0 +1,38 @@
+# Core dependencies
+fastapi
+uvicorn[standard]
+pydantic
+requests
+beautifulsoup4
+lxml
+
+# Search
+duckduckgo-search
+ddgs
+
+# Optional: Browser automation (for JS-heavy sites)
+playwright
+
+# LangChain for local docs
+langchain-community
+langchain-ollama
+langchain-text-splitters
+faiss-cpu
+aiohttp
+
+# Environment variables 
+python-dotenv
+
+# Structured logging 
+structlog
+
+# Testing 
+pytest
+
+# Type checking 
+mypy
+
+# Optional: Voice features
+# pyttsx3
+# SpeechRecognition
+# pyaudio
