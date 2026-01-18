@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Test data
+body.json
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
