@@ -3,6 +3,7 @@
 A collection of chatbot projects. Each bot lives in its own folder and has its own README.
 
 ## Current bots
+- **Alfred** - local AI assistant with web search, voice, and study mode
 - **ApexVora Bot** - carnivorous plant care
 - **ScarletSous Bot** - recipe suggestions from ingredients
 - **SkyPanel Bot** - live weather lookup
