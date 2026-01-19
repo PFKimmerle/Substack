@@ -3,6 +3,14 @@ const input = document.getElementById("q");
 const out = document.getElementById("out");
 const send = document.getElementById("send");
 
+function parseIngredients(text) {
+  return text
+    .replace(/\s+and\s+/gi, ",")
+    .split(",")
+    .map(i => i.trim())
+    .filter(Boolean);
+}
+
 function createSkeletonCards() {
   const container = document.createElement("div");
   container.className = "skeleton-cards";
@@ -119,6 +127,8 @@ form.addEventListener("submit", async (e) => {
   const text = input.value.trim();
   if (!text) return;
 
+  const ingredients = parseIngredients(text);
+
   addMsg(text, "me");
   input.value = "";
   send.disabled = true;
@@ -129,7 +139,7 @@ form.addEventListener("submit", async (e) => {
     const response = await fetch("/api/rolebot", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: text })
+      body: JSON.stringify({ message: text, ingredients: ingredients })
     });
 
     loadingMsg.remove();
