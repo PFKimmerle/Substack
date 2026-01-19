@@ -8,6 +8,7 @@ A simple recipe chatbot. Tell it what ingredients you have, get recipe suggestio
 ```
 SPOON_KEY=your_spoonacular_key
 RAPID_API_KEY=your_rapidapi_key
+GROQ_API_KEY=your_groq_key
 PORT=3000
 ```
 

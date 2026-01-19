@@ -1,11 +1,32 @@
 import os
 import requests
 from flask import Flask, request, jsonify, send_from_directory
+from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv()
 
 app = Flask(__name__, static_folder="public", static_url_path="")
+groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
+
+
+def generate_greeting(ingredient: str):
+    """Use Groq to generate a short personalized greeting."""
+    fallback = f"Here are some recipes using {ingredient}:"
+    try:
+        resp = groq_client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[{
+                "role": "user",
+                "content": f"Write a casual 5-8 word intro for {ingredient} recipes. Be natural, not salesy. Example: 'Here are some tasty chicken ideas:'"
+            }],
+            max_tokens=30,
+            temperature=0.7,
+        )
+        greeting = resp.choices[0].message.content.strip().strip('"\'')
+        return greeting if greeting else fallback
+    except Exception:
+        return fallback
 
 # ----- Recipe APIs -----
 def search_spoonacular(ingredient: str):
@@ -129,8 +150,10 @@ def rolebot():
     if not recipes:
         return jsonify({"error": "No recipes found. Try a different ingredient."})
 
+    greeting = generate_greeting(msg)
+
     return jsonify({
-        "greeting": f"Here are some recipes using {msg}!",
+        "greeting": greeting,
         "recipes": recipes
     })
 
