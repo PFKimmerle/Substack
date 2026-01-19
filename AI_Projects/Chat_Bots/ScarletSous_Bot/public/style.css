@@ -313,6 +313,34 @@ button, input {
   color: var(--text-muted);
 }
 
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card:hover .card-title {
+  color: var(--red);
+}
+
+/* Recipe Response Container */
+.recipe-response {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.recipe-greeting {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 /* ===================================
    SKELETON LOADING
    =================================== */

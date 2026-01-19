@@ -1,37 +1,24 @@
-# ScarletSous (Recipe Bot)
+# ScarletSous
 
-A chatbot that suggests recipes based on ingredients you provide.  
-Built with Flask and the Groq API. Uses Spoonacular and TheMealDB for recipe data.
+A simple recipe chatbot. Tell it what ingredients you have, get recipe suggestions with images.
 
+## Setup
 
-## Setup & Run
+1. Create `.env` with your keys:
+```
+SPOON_KEY=your_spoonacular_key
+RAPID_API_KEY=your_rapidapi_key
+PORT=3000
+```
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. Install and run:
+```
+pip install -r requirements.txt
+python server.py
+```
 
-2. Create a `.env` file in the root (see `.env.example` for format):
-   - Groq API Key (FREE): https://console.groq.com/
-   - Spoonacular API Key (FREE tier): https://spoonacular.com/food-api
+3. Open http://localhost:3000
 
-3. Start the server:
-   ```bash
-   python server.py
-   ```
+## How it works
 
-4. Open in your browser:
-   ```
-   http://localhost:3000
-   ```
-
-
-## Notes
-
-- `GROQ_MODEL` is optional. Default is `openai/gpt-oss-120b`. Update to whatever model you're using.
-- TheMealDB is the fallback if Spoonacular doesn't return results. It's free and requires no API key.
-
-
-## License
-
-MIT - free to use, learn from, and adapt.
+Uses Spoonacular as the primary recipe API. Falls back to Tasty (via RapidAPI) if Spoonacular is unavailable. Both return recipe cards with images, cook time, and links to the full recipe.
