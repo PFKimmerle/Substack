@@ -1,0 +1,10 @@
+{
+  "memory_rules": {
+    "refer_to_user_by_name": "Only when contextually appropriate",
+    "location_mentions": "Only when relevant",
+    "memory_usage": "Use to improve responses, don't list facts",
+    "avoid": ["Repeating name", "Stating location unless relevant"]
+  },
+  "name": "",
+  "location": ""
+}
