@@ -1,6 +1,6 @@
 # AI
 
-A collection of AI projects. Each bot lives in its own folder and has its own README.
+A collection of AI projects. Each project lives in its own folder and has its own README.
 
 ## Current Projects
 - **Alfred** - local AI assistant with web search, voice, and study mode
