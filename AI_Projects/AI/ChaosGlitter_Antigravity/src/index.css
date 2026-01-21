@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kawaii-white: #ffffff;
+  --color-kawaii-pink: #ff9ff3;
+  --color-kawaii-yellow: #feca57;
+  --color-kawaii-text: #2d3436;
+  --color-kawaii-blue: #54a0ff;
+}
+
+body {
+  @apply bg-kawaii-white text-kawaii-text;
+}
+
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-kawaii-pink;
+}
