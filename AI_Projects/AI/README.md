@@ -16,4 +16,4 @@ A collection of AI projects. Each project lives in its own folder and has its ow
 2. Read that folder’s `README.md`.
 3. Follow its install/run steps (and add any API keys it mentions).
 
-> side note, different oroject may use different stacks. Check each project’s README for details.
+> side note, different project may use different stacks. Check each project’s README for details.
