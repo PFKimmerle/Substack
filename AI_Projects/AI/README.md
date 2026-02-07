@@ -7,6 +7,7 @@ A collection of AI projects. Each project lives in its own folder and has its ow
 - **ApexVora** - carnivorous plant care
 - **Baby_Book_Writer** - baby book generator with AI text and image prompts
 - **ChaosGlitter_Antigravity** - sticker shop built with Google Antigravity IDE
+- **MurderMystery** - detective game with AI-powered interrogations
 - **ScarletSous** - recipe suggestions from ingredients
 - **SkyPanel** - live weather lookup
 - **TARS** - Interstellar-themed chatbot
