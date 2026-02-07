@@ -1,0 +1,297 @@
+{
+  "id": "mansion-murder",
+  "title": "Murder at Blackwood Manor",
+  "introduction": "Lord Blackwood is dead. Someone in this house killed him last night, and they're still here. You have limited time before the police arrive.",
+  "victim": {
+    "name": "Lord Edmund Blackwood",
+    "description": "A 68-year-old aristocrat known for his vast fortune and equally vast collection of enemies. He was a stern, unforgiving man who kept many secrets.",
+    "foundIn": "study",
+    "timeOfDeath": "Between 9:00 PM and 10:00 PM"
+  },
+  "suspects": [
+    {
+      "id": "victoria",
+      "name": "Lady Victoria Blackwood",
+      "occupation": "Wife of the deceased",
+      "description": "An elegant woman in her early 50s with silver-streaked hair and sharp eyes. She wears expensive jewelry and maintains an air of composure despite the circumstances.",
+      "personality": "Composed, calculating, speaks in measured tones. Reveals little emotion but occasionally lets slip bitter remarks about her late husband.",
+      "relationship": "Wife of 30 years. Their marriage was more arrangement than love. She stood to inherit the estate.",
+      "alibi": "Claims she was in the drawing room reading until she heard the butler's scream.",
+      "secrets": ["Had been secretly consulting with a divorce attorney", "Knew about Edmund's hidden will that would leave her nothing"],
+      "currentRoom": "drawing_room"
+    },
+    {
+      "id": "marcus",
+      "name": "Marcus Blackwood",
+      "occupation": "Son and heir",
+      "description": "A nervous man in his late 20s with disheveled hair and ink-stained fingers. He avoids eye contact and fidgets constantly.",
+      "personality": "Anxious, defensive, prone to rambling when nervous. Clearly hiding something but terrible at deception.",
+      "relationship": "Only son, stood to inherit everything. Had a strained relationship with his demanding father.",
+      "alibi": "Says he was in his bedroom writing letters, but cannot produce any letters as evidence.",
+      "secrets": ["Owes significant gambling debts to dangerous people", "Overheard arguing with his father earlier that evening"],
+      "currentRoom": "bedroom_wing"
+    },
+    {
+      "id": "helena",
+      "name": "Helena Cross",
+      "occupation": "Personal Secretary",
+      "description": "A sharp-featured woman in her 30s with spectacles and a practical demeanor. She carries a leather notebook everywhere.",
+      "personality": "Efficient, observant, speaks precisely. Loyal to her employer but hints at knowing things she shouldn't.",
+      "relationship": "Edmund's secretary for 5 years. Knew all his business dealings and personal affairs.",
+      "alibi": "Claims she was organizing files in the library until she heard commotion.",
+      "secrets": ["Had discovered Edmund was embezzling from his own company", "Was being blackmailed by Edmund to keep quiet"],
+      "currentRoom": "library"
+    },
+    {
+      "id": "gerald",
+      "name": "Gerald Finch",
+      "occupation": "Butler",
+      "description": "A dignified older man with grey temples and impeccable posture. His hands shake slightly when he speaks of the murder.",
+      "personality": "Formal, proper, speaks with careful precision. Genuinely distressed by his master's death but maintains professional composure.",
+      "relationship": "Served the family for 40 years. Discovered the body and raised the alarm.",
+      "alibi": "Was preparing the evening brandy service when he entered the study and found the body.",
+      "secrets": ["Edmund had threatened to fire him without pension next week", "Had been stealing small amounts from the household for years"],
+      "currentRoom": "kitchen"
+    },
+    {
+      "id": "rose",
+      "name": "Rose Chen",
+      "occupation": "Housekeeper",
+      "description": "A quiet woman in her 40s with keen eyes that miss nothing. She moves silently and seems to appear from nowhere.",
+      "personality": "Observant, speaks little but when she does, it's significant. Watches everyone carefully.",
+      "relationship": "Housekeeper for 8 years. Had access to every room and knew everyone's routines.",
+      "alibi": "Says she was in the kitchen preparing for the next day until she heard Gerald's cry.",
+      "secrets": ["Witnessed Victoria and Edmund in a heated argument that afternoon", "Knows about the secret passage that leads to the study"],
+      "currentRoom": "kitchen"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "entrance_hall",
+      "name": "Entrance Hall",
+      "description": "A grand foyer with marble floors and a sweeping staircase. Family portraits line the walls, their eyes seeming to follow you. A grandfather clock ticks solemnly in the corner.",
+      "clueIds": ["muddy_footprints"],
+      "connectedRooms": ["drawing_room", "library", "kitchen", "bedroom_wing"]
+    },
+    {
+      "id": "study",
+      "name": "Study",
+      "description": "The crime scene. A wood-paneled room with floor-to-ceiling bookshelves. Lord Blackwood's body has been removed, but chalk marks remain. The desk is in disarray, papers scattered everywhere.",
+      "clueIds": ["broken_glass", "torn_letter", "hidden_will", "blood_pattern", "letter_opener_clean", "poker_undisturbed"],
+      "connectedRooms": ["library", "drawing_room"]
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "description": "A vast room filled with thousands of leather-bound books. A rolling ladder provides access to the higher shelves. The room smells of old paper and secrets.",
+      "clueIds": ["financial_records", "threatening_note"],
+      "connectedRooms": ["entrance_hall", "study"]
+    },
+    {
+      "id": "drawing_room",
+      "name": "Drawing Room",
+      "description": "An elegant sitting room with velvet furniture and a crackling fireplace. A half-finished glass of wine sits abandoned on a side table.",
+      "clueIds": ["wine_glass", "burned_document", "candlestick_clean"],
+      "connectedRooms": ["entrance_hall", "study"]
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "description": "A large, well-equipped kitchen with copper pots hanging from the ceiling. The remains of dinner preparation still litter the counters.",
+      "clueIds": ["missing_knife", "servants_schedule"],
+      "connectedRooms": ["entrance_hall", "servants_quarters"]
+    },
+    {
+      "id": "bedroom_wing",
+      "name": "Bedroom Wing",
+      "description": "A long corridor with doors leading to various bedrooms. The carpet is thick and would muffle footsteps. Several doors stand ajar.",
+      "clueIds": ["gambling_debts", "overheard_argument"],
+      "connectedRooms": ["entrance_hall"]
+    },
+    {
+      "id": "servants_quarters",
+      "name": "Servants' Quarters",
+      "description": "Modest but clean rooms where the staff resides. Personal belongings and small keepsakes hint at lives beyond service.",
+      "clueIds": ["secret_passage_map", "pension_notice"],
+      "connectedRooms": ["kitchen"]
+    }
+  ],
+  "clues": [
+    {
+      "id": "muddy_footprints",
+      "name": "Muddy Footprints",
+      "description": "Fresh muddy footprints lead from the entrance to the study and back. The pattern suggests someone entered from outside recently.",
+      "roomId": "entrance_hall",
+      "pointsTo": "marcus",
+      "category": "physical"
+    },
+    {
+      "id": "broken_glass",
+      "name": "Broken Whiskey Glass",
+      "description": "Shattered crystal on the floor near the desk. The whiskey has stained the carpet in a splatter pattern, suggesting it was thrown.",
+      "roomId": "study",
+      "pointsTo": "marcus",
+      "category": "physical"
+    },
+    {
+      "id": "torn_letter",
+      "name": "Torn Letter Fragment",
+      "description": "A piece of expensive stationery with the words '...cannot pay... they will kill me... need the inheritance now...' written in hasty script.",
+      "roomId": "study",
+      "pointsTo": "marcus",
+      "category": "document"
+    },
+    {
+      "id": "hidden_will",
+      "name": "Hidden Will",
+      "description": "A second will, dated last week, found in a secret compartment of the desk. It leaves everything to charity, disinheriting the entire family.",
+      "roomId": "study",
+      "pointsTo": "victoria",
+      "requiredClueId": "broken_glass",
+      "category": "document"
+    },
+    {
+      "id": "blood_pattern",
+      "name": "Blood Splatter Pattern",
+      "description": "The blood pattern suggests the victim was struck from behind while seated. The killer was likely someone he trusted enough to turn his back on.",
+      "roomId": "study",
+      "pointsTo": null,
+      "category": "physical"
+    },
+    {
+      "id": "financial_records",
+      "name": "Financial Records",
+      "description": "Detailed ledgers showing large sums of money being moved to offshore accounts. Someone was systematically draining the family fortune.",
+      "roomId": "library",
+      "pointsTo": "helena",
+      "category": "document"
+    },
+    {
+      "id": "threatening_note",
+      "name": "Threatening Note",
+      "description": "A typed note reading: 'Pay what you owe or face the consequences. You have until the end of the month.' No signature.",
+      "roomId": "library",
+      "pointsTo": "marcus",
+      "category": "document"
+    },
+    {
+      "id": "wine_glass",
+      "name": "Abandoned Wine Glass",
+      "description": "Lady Victoria's wine glass, only half finished. Unusual for someone who claims to have been reading peacefully all evening.",
+      "roomId": "drawing_room",
+      "pointsTo": "victoria",
+      "category": "physical"
+    },
+    {
+      "id": "burned_document",
+      "name": "Partially Burned Document",
+      "description": "Remains of papers in the fireplace. The fragments visible include words like 'divorce' and 'settlement' and 'half the estate.'",
+      "roomId": "drawing_room",
+      "pointsTo": "victoria",
+      "category": "document"
+    },
+    {
+      "id": "missing_knife",
+      "name": "Missing Carving Knife",
+      "description": "The kitchen knife block is missing its largest carving knife. The wound on the victim was made by a similar blade.",
+      "roomId": "kitchen",
+      "pointsTo": null,
+      "category": "physical"
+    },
+    {
+      "id": "servants_schedule",
+      "name": "Servants' Schedule",
+      "description": "A work schedule showing Gerald was supposed to be in the wine cellar at 9 PM, not preparing brandy as he claimed.",
+      "roomId": "kitchen",
+      "pointsTo": "gerald",
+      "category": "document"
+    },
+    {
+      "id": "gambling_debts",
+      "name": "Gambling IOUs",
+      "description": "A collection of IOUs totaling over £50,000, all signed by Marcus Blackwood. Many are marked 'FINAL NOTICE' in red ink.",
+      "roomId": "bedroom_wing",
+      "pointsTo": "marcus",
+      "category": "document"
+    },
+    {
+      "id": "overheard_argument",
+      "name": "Witness Account",
+      "description": "Notes from Rose Chen stating she overheard Marcus shouting at his father: 'I'll kill you before I let you ruin me!' at approximately 8:30 PM.",
+      "roomId": "bedroom_wing",
+      "pointsTo": "marcus",
+      "requiredClueId": "gambling_debts",
+      "category": "testimony"
+    },
+    {
+      "id": "secret_passage_map",
+      "name": "Secret Passage Blueprint",
+      "description": "An old architectural drawing showing a hidden passage from the servants' quarters directly to the study. Few knew it existed.",
+      "roomId": "servants_quarters",
+      "pointsTo": "rose",
+      "category": "document"
+    },
+    {
+      "id": "pension_notice",
+      "name": "Termination Notice Draft",
+      "description": "An unsigned letter dismissing Gerald Finch without pension for 'years of petty theft.' It was to take effect at month's end.",
+      "roomId": "servants_quarters",
+      "pointsTo": "gerald",
+      "category": "document"
+    },
+    {
+      "id": "letter_opener_clean",
+      "name": "Letter Opener",
+      "description": "A brass letter opener sits on the desk, clean and polished. No blood or scratches.",
+      "roomId": "study",
+      "pointsTo": null,
+      "category": "physical"
+    },
+    {
+      "id": "poker_undisturbed",
+      "name": "Fireplace Poker",
+      "description": "The iron poker rests in its stand by the fireplace, covered in undisturbed soot. Hasn't been touched.",
+      "roomId": "study",
+      "pointsTo": null,
+      "category": "physical"
+    },
+    {
+      "id": "candlestick_clean",
+      "name": "Silver Candlestick",
+      "description": "The heavy candlestick sits in its usual place on the mantle. Clean, no marks or damage.",
+      "roomId": "drawing_room",
+      "pointsTo": null,
+      "category": "physical"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "carving_knife",
+      "name": "Carving Knife",
+      "description": "A large kitchen knife, missing from the knife block"
+    },
+    {
+      "id": "letter_opener",
+      "name": "Letter Opener",
+      "description": "A sharp brass letter opener from the study desk"
+    },
+    {
+      "id": "candlestick",
+      "name": "Heavy Candlestick",
+      "description": "An ornate silver candlestick from the drawing room"
+    },
+    {
+      "id": "poker",
+      "name": "Fireplace Poker",
+      "description": "A wrought iron poker from the study fireplace"
+    }
+  ],
+  "solution": {
+    "killerId": "marcus",
+    "weaponId": "carving_knife",
+    "locationId": "study",
+    "motive": "Marcus was drowning in gambling debts and discovered his father planned to disinherit the entire family. In a moment of desperate rage, he confronted his father and, when Edmund refused to help, struck him down with a knife stolen from the kitchen. The muddy footprints are from when he went outside to compose himself before returning to 'discover' the body.",
+    "confession": "I... I didn't mean for it to happen! He was going to leave everything to charity. CHARITY! While I had loan sharks threatening to break my legs! I just wanted to talk, but he laughed at me, called me weak, said I deserved to suffer for my failures. I grabbed the knife and... and before I knew it, it was over. I'm sorry. I'm so sorry."
+  },
+  "maxActions": 25
+}

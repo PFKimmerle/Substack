@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light theme */
+  :root,
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+    --radius: 0.5rem;
+  }
+
+  /* Dark theme */
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 90%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 90%;
+    --primary: 210 40% 90%;
+    --primary-foreground: 222 47% 6%;
+    --secondary: 217 33% 14%;
+    --secondary-foreground: 210 40% 90%;
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 14%;
+    --accent-foreground: 210 40% 90%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 210 40% 90%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Light mode specific */
+  .light body,
+  .light main {
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  .light .bg-slate-950 {
+    @apply bg-slate-50;
+  }
+
+  .light .bg-slate-900 {
+    @apply bg-white;
+  }
+
+  .light .bg-slate-800 {
+    @apply bg-slate-100;
+  }
+
+  .light .text-white {
+    @apply text-slate-900;
+  }
+
+  .light .text-slate-200 {
+    @apply text-slate-800;
+  }
+
+  .light .text-slate-300 {
+    @apply text-slate-700;
+  }
+
+  .light .text-slate-400 {
+    @apply text-slate-600;
+  }
+
+  .light .border-slate-800 {
+    @apply border-slate-200;
+  }
+
+  .light .border-slate-700 {
+    @apply border-slate-300;
+  }
+}
