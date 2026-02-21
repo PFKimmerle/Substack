@@ -2,15 +2,7 @@
 
 Carnivorous plant care chatbot with **vision capabilities**. Upload a photo of your sundew, Venus flytrap, or pitcher plant to get identification and health assessments.
 
-## What's New in v2
-
-- **Image analysis**: Upload, paste (Ctrl+V), or drag-and-drop plant photos
-- **Plant ID from photos**: Identifies sundews, Venus flytraps, Nepenthes, Sarracenia, and butterworts
-- **Health detection**: Spots mold, root rot, humidity issues, and other common problems
-- **Usage tracking**: Visual meter showing daily API usage (Groq free tier: 1000/day)
-- **Response caching**: Reduces API calls for repeated text queries
-
-## Setup
+ ## Setup
 
 ### 1. Server
 
@@ -70,9 +62,3 @@ npx serve .
 | Groq | Yes | https://console.groq.com/keys |
 | Perenual | Optional | https://perenual.com/docs/api |
 | Trefle | Optional | https://trefle.io/ |
-
-## Groq Free Tier Limits
-
-- 1,000 requests/day
-- 30 requests/minute
-- Usage meter in header shows current consumption
