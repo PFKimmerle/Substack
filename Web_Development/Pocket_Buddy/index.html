@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMO</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="games.js" defer></script>
+</head>
+<body>
+  <div class="bmo">
+    <!-- Screen with face -->
+    <div class="screen">
+      <div class="face">
+        <div class="eyes">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+
+      <!-- No Signal Screen -->
+      <div id="noSignal" style="display: none;">
+        <div class="tenor-gif-embed" data-postid="2443668683574783998" data-share-method="host" data-aspect-ratio="1.50909" data-width="100%">
+          <a href="https://tenor.com/view/no-signal-stand-by-static-nothing-void-gif-2443668683574783998">No Signal Stand By GIF</a> from <a href="https://tenor.com/search/no+signal-gifs">No Signal GIFs</a>
+        </div>
+      </div>
+
+      <!-- YouTube Video Player -->
+      <div class="video-player" style="display: none;">
+        <iframe
+          id="youtubePlayer"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/JaqpKXPc-nI?si=WY2hwbajaQ_Ncxgq&enablejsapi=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- File Edit View Image -->
+      <div class="image-screen" id="fileEditView" style="display: none;">
+        <img src="File_edit_view.png" alt="File Edit View">
+      </div>
+
+      <!-- Blueprint Image -->
+      <div class="image-screen" id="bluePrint" style="display: none;">
+        <img src="blue_print.png" alt="Blueprint">
+      </div>
+
+    </div>
+    
+    <!-- Play Video button and blue dot -->
+    <div class="slot-row">
+      <button class="video-btn" id="videoBtn">PLAY VIDEO</button>
+      <div class="blue-dot"></div>
+    </div>
+    
+    <!-- Controls -->
+    <div class="controls">
+      <!-- D-pad - yellow plus shape -->
+      <div class="dpad">
+        <span class="dpad-arrow dpad-up">▲</span>
+        <span class="dpad-arrow dpad-down">▼</span>
+        <span class="dpad-arrow dpad-left">◀</span>
+        <span class="dpad-arrow dpad-right">▶</span>
+      </div>
+      
+      <!-- Action buttons - empty circles -->
+      <div class="buttons">
+        <div class="music-controls">
+          <button class="btn-music-nav" id="musicPrev">◀</button>
+          <button class="btn-triangle" id="musicToggle">♪</button>
+          <button class="btn-music-nav" id="musicNext">▶</button>
+        </div>
+        <button class="btn-green">BACK</button>
+        <button class="btn-red"><span class="stacked">PLAY<br>GAMES</span></button>
+      </div>
+    </div>
+
+    <!-- Bottom rectangles -->
+    <div class="bottom-buttons">
+      <button class="btn-blue"></button>
+      <button class="btn-blue"></button>
+    </div>
+  </div>
+
+  <!-- Tenor GIF embed script -->
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</body>
+</html>

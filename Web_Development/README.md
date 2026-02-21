@@ -4,6 +4,9 @@ This folder contains a series of web development projects showcased as part of t
 
 ## Projects Overview
 
+### BMO Console Buddy
+An interactive BMO console inspired by Adventure Time.
+
 ### ChoreMate
 A household chore manager that uses free APIs to generate chore suggestions. 
 

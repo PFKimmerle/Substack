@@ -1,0 +1,571 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #6DD5C3 0%, #5AC4B2 100%);
+  font-family: Arial, sans-serif;
+}
+
+.bmo {
+  width: 400px;
+  background: #63C3B5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* Screen */
+.screen {
+  width: 100%;
+  height: 280px;
+  background: #E8F5DC;
+  border-radius: 15px;
+  border: 4px solid #2A2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.eyes {
+  display: flex;
+  gap: 100px;
+}
+
+.eye {
+  width: 16px;
+  height: 16px;
+  background: #000;
+  border-radius: 50%;
+  animation: blink 4s infinite;
+}
+
+.eye:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.eye:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.mouth {
+  width: 70px;
+  height: 25px;
+  border: 4px solid #000;
+  border-radius: 0 0 100px 100px;
+  background: #2D8B75;
+  transition: all 0.3s ease;
+}
+
+/* Gentle smile - subtle curve */
+.mouth.gentle {
+  width: 50px;
+  height: 15px;
+  border: 3px solid #000;
+  border-top: none;
+  background: transparent;
+}
+
+/* Neutral - straight line */
+.mouth.neutral {
+  width: 50px;
+  height: 0;
+  border: 0;
+  border-bottom: 4px solid #000;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* Video button row - play video button on left, blue dot on right */
+.slot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.video-btn {
+  width: 150px;
+  height: 20px;
+  background: rgba(0,0,0,0.4);
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.7);
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.video-btn:hover {
+  background: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,0.9);
+}
+
+.video-btn:active {
+  transform: scale(0.98);
+}
+
+.video-btn .stacked {
+  line-height: 1;
+  font-size: 10px;
+  display: inline;
+}
+
+.blue-dot {
+  width: 20px;
+  height: 20px;
+  background: #2C5AA0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.blue-dot:hover {
+  transform: scale(1.2);
+}
+
+.blue-dot:active {
+  transform: scale(0.9);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+/* D-pad - actual plus/cross SHAPE */
+.dpad {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+
+/* Vertical part of plus */
+.dpad::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 85px;
+  background: #FFD859;
+  border-radius: 15px;
+}
+
+/* Horizontal part of plus */
+.dpad::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85px;
+  height: 30px;
+  background: #FFD859;
+  border-radius: 15px;
+}
+
+/* D-pad arrows */
+.dpad-arrow {
+  position: absolute;
+  font-size: 14px;
+  color: #D4A500;
+  z-index: 1;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.dpad-up {
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dpad-down {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dpad-left {
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dpad-right {
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Action buttons - empty, no symbols */
+.buttons {
+  display: grid;
+  grid-template-areas:
+    ". music"
+    "green red";
+  gap: 12px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Music controls group */
+.music-controls {
+  grid-area: music;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-music-nav {
+  width: 24px;
+  height: 24px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-music-nav:hover {
+  background: rgba(255,255,255,0.5);
+  transform: scale(1.1);
+}
+
+.btn-music-nav:active {
+  transform: scale(0.9);
+}
+
+/* Stacked text for buttons */
+.stacked {
+  line-height: 1.1;
+  font-size: 8px;
+}
+
+.btn-triangle {
+  grid-area: triangle;
+  width: 35px;
+  height: 35px;
+  background: #2C5AA0;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-green {
+  grid-area: green;
+  width: 40px;
+  height: 40px;
+  background: #2D7A3E;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-red {
+  grid-area: red;
+  width: 55px;
+  height: 55px;
+  background: #C41E3A;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Bottom buttons - empty rectangles */
+.bottom-buttons {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.btn-blue {
+  width: 55px;
+  height: 22px;
+  background: #2C5AA0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/* Game Menu */
+.game-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.menu-game {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D8B75;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 8px;
+  min-width: 160px;
+  text-align: center;
+}
+
+.menu-hint {
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Game Canvas */
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.game-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.color-bars {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  flex: 1;
+  height: 100%;
+}
+
+.bar-white { background: #ffffff; }
+.bar-yellow { background: #ffff00; }
+.bar-cyan { background: #00ffff; }
+.bar-green { background: #00ff00; }
+.bar-magenta { background: #ff00ff; }
+.bar-red { background: #ff0000; }
+.bar-blue { background: #0000ff; }
+.bar-black { background: #000000; }
+
+.signal-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 10px rgba(0,0,0,0.8);
+  letter-spacing: 3px;
+  z-index: 10;
+}
+
+/* YouTube Video Player */
+.video-player {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video-player iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Image Screens */
+.image-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #E8F5DC;
+}
+
+.image-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* No Signal Screen */
+#noSignal {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Music Player */
+.music-player {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.player-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.track-name {
+  font-size: 13px;
+  color: #2D8B75;
+  text-align: center;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.player-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: rgba(255,255,255,0.5);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.player-btn:hover {
+  background: rgba(255,255,255,0.8);
+  transform: scale(1.05);
+}
+
+.player-btn:active {
+  transform: scale(0.95);
+}
+
+.player-btn-main {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background: #2D8B75;
+  color: #fff;
+  border-color: #2D8B75;
+}
+
+.player-btn-main:hover {
+  background: #3AA089;
+}
+
+.track-time {
+  font-size: 11px;
+  color: #666;
+  font-family: monospace;
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  92%, 96% {
+    transform: scaleY(0.1);
+  }
+  94% {
+    transform: scaleY(1);
+  }
+}
