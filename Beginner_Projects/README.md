@@ -13,6 +13,9 @@ A tool to manage and display class schedules.
 ### Flip and Match
 A terminal-based emoji memory game where players flip cards and try to match pairs.
 
+### Luna Desktop Pet
+A Sailor Moon-inspired desktop companion built with Python and tkinter. Luna idles, walks, sleeps, dances, crawls on walls, and reacts to drag-and-drop interactions.
+
 ### Movie Mood Analyzer
 A Flask app that analyzes movie reviews using VADER sentiment analysis.
 
