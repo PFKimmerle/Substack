@@ -1,7 +1,4 @@
-"""
-Luna Desktop Pet Launcher
-Simple Start/Stop GUI - double-click to run
-"""
+"""Luna Desktop Pet Launcher"""
 import tkinter as tk
 from tkinter import ttk
 import subprocess
@@ -12,34 +9,27 @@ class LunaLauncher:
         self.process = None
         self.is_running = False
 
-        # Window setup
         self.root = tk.Tk()
         self.root.title("Luna Pet")
         self.root.geometry("250x120")
         self.root.resizable(False, False)
         self.root.configure(bg='#f0f0f0')
 
-        # Modern theme
         style = ttk.Style()
         style.theme_use('clam')
-
-        # Custom button style
         style.configure('Toggle.TButton',
                         font=('Segoe UI', 11),
                         padding=(20, 10))
 
-        # Center window on screen
         self.root.update_idletasks()
         w, h = 250, 120
         x = (self.root.winfo_screenwidth() - w) // 2
         y = (self.root.winfo_screenheight() - h) // 2
         self.root.geometry(f"{w}x{h}+{x}+{y}")
 
-        # Main frame with padding
         main_frame = ttk.Frame(self.root, padding=15)
         main_frame.pack(fill=tk.BOTH, expand=True)
 
-        # Status label (colored)
         self.status_label = tk.Label(
             main_frame,
             text="Stopped",
@@ -49,7 +39,6 @@ class LunaLauncher:
         )
         self.status_label.pack(pady=(0, 15))
 
-        # Single toggle button
         self.toggle_btn = ttk.Button(
             main_frame,
             text="Start Luna",
@@ -59,10 +48,8 @@ class LunaLauncher:
         )
         self.toggle_btn.pack()
 
-        # Handle window close
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
 
-        # Get the path to pets.py
         self.script_dir = os.path.dirname(os.path.abspath(__file__))
         self.pets_path = os.path.join(self.script_dir, "pets.py")
 
