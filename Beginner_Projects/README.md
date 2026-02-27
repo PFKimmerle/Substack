@@ -7,6 +7,9 @@ This directory within the Substack repository is dedicated beginner-friendly cod
 ### 5 Beginner Coding Projects
 A bundle of small Python projects covering topics like randomization, input handling, and simple logic.
 
+### BMO Desktop Pet
+A pixel art BMO that walks around your desktop, bounces off screen edges, and shows random Adventure Time character speech bubbles.
+
 ### Class Scheduling Script
 A tool to manage and display class schedules.
 
