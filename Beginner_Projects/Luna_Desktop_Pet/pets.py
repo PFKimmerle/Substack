@@ -1163,8 +1163,8 @@ class Pet:
         self.action_idx = 0
         self.fall_toggle = 0  # alternates between 0 and 1 for fall animation
         self.loop_counter = {}  # per-action loop count for glitch timing
-        self.glitch_actions = {0, 4, 5, 8}  # ground animations only
-        self.glitch_every_n = 5  # show glitch every Nth loop
+        self.glitch_actions = {4, 5}  # walk animations only
+        self.glitch_every_n = 3  # show glitch every 3rd walk cycle
         self.x = int(self.screen_width*random.randrange(20, 80)*0.01)
         self.y = self.screen_height - self.pet_height  # drawing starts from top left
 
